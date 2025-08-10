@@ -21,16 +21,21 @@ public class KinesisHandler {
 
   private PlayerActionRetriever actionRetriever;
 
-  public KinesisHandler(Player player) {
-    // intitialize the currentStamina and endurance systems
+  public KinesisHandler(Player player, PlayerActionRetriever actionRetriever, PlayerAttributeRetriever attributeRetriever) {
+    // initialize the currentStamina and endurance systems
     this.staminaHandler = new StaminaHandler(100.0);
     this.enduranceHandler = new EnduranceHandler(100.0);
     this.exhaustionHandler = new ExhaustionHandler();
 
-    // initialize retriever system
-    this.actionRetriever = new PlayerActionRetriever();
+    // use centralized retriever system
+    this.actionRetriever = actionRetriever;
+    
+    // Inject the centralized retrievers into the handlers
+    this.staminaHandler.setActionRetriever(actionRetriever);
+    this.enduranceHandler.setActionRetriever(actionRetriever);
+    this.enduranceHandler.setAttributeRetriever(attributeRetriever);
 
-    processMovementLogic(player);
+    processMovementLogic();
   }
 
   /******************************************************************************************************
@@ -49,10 +54,10 @@ public class KinesisHandler {
     } else if (currentEndurance > 0) {
       // initiate the endurance system
       handleEnduranceMovement(currentEndurance);
-      preventStaminaRegen();
+      // preventStaminaRegen(); // TODO: Implement this method
     } else {
       // TODO: Player exhaustion state
-      handleExhaustion();
+      handleExhausion();
     }
   }
 
@@ -72,7 +77,7 @@ public class KinesisHandler {
         staminaHandler.JumpingState(stamina);
       } else {
         // Regenerate stamina when not moving
-        staminaHandler.isRegenerating();
+        staminaHandler.isRegenerating(stamina);
       }
     }
   }
@@ -126,14 +131,15 @@ public class KinesisHandler {
    * @param parkourCost Base stamina cost 
    * @return true if parkour is allowed
    */
-  public boolean canPerfomParkour(int parkourCost) {
+  public boolean canPerformParkour(int parkourCost) {
     Player player = actionRetriever.getCurrentPlayer();
 
     // Check for physiology energy
-    boolean hasPhysiologyEnergy = staminaHandler.canPerfomMovement() || enduranceHandler.getEndurance() > 0;
+    boolean hasPhysiologyEnergy = staminaHandler.canPerformMovement() || enduranceHandler.getEndurance() > 0;
 
-    // Check for stamina to enable parcool 
-    boolean hasParCoolStamina = parCoolStamina != null && parCoolStamina.getValue() => parkourCost && !parCoolStamina.isExhausted();
+    // Get ParCool stamina for the player
+    Stamina parCoolStamina = Stamina.get(player);
+    boolean hasParCoolStamina = parCoolStamina != null && parCoolStamina.getValue() >= parkourCost && !parCoolStamina.isExhausted();
 
     return hasPhysiologyEnergy && hasParCoolStamina;
   }
@@ -146,7 +152,7 @@ public class KinesisHandler {
    */
   @OnlyIn(Dist.CLIENT)
   public void executeParkourMove(Player player, int baseParkourCost) {
-    if (!canPerfomParkour(player, baseParkourCost)) {
+    if (!canPerformParkour(baseParkourCost)) {
       return;
     }
 
@@ -164,9 +170,9 @@ public class KinesisHandler {
     // TODO: to be changed in the future
     double physiologyCost = baseParkourCost * 0.5;
 
-    if (staminaHandler.canPerfomMovement()) {
+    if (staminaHandler.canPerformMovement()) {
       // Drain stamina 
-      double newStamina = staminaHandler.gethandler() - physiogyCost;
+      double newStamina = staminaHandler.getStamina() - physiologyCost;
       staminaHandler.setStamina(newStamina);
     } else {
       // Drain from endurance when stamina is depleted
@@ -227,9 +233,5 @@ public class KinesisHandler {
 
   public PlayerActionRetriever getActionRetriever() {
     return actionRetriever;
-  }
-
-  public PlayerAttributeRetriever getAttributeRetriever() {
-    return attributeRetriever;
   }
 }

@@ -14,11 +14,16 @@ public class StaminaHandler {
   private double stamina;
   private double maxStamina = 100.0;
 
-  // actions
-  PlayerActionRetriever action = new PlayerActionRetriever();
+  // actions - to be injected by the system
+  private PlayerActionRetriever action;
 
   public StaminaHandler(double stamina) {
     this.stamina = stamina;
+  }
+  
+  // Method to inject the centralized action retriever
+  public void setActionRetriever(PlayerActionRetriever actionRetriever) {
+    this.action = actionRetriever;
   }
 
   public double getStamina() {
@@ -63,7 +68,7 @@ public class StaminaHandler {
   public double SprintState(double currentStamina) {
     // TODO: Implement sprintIndex
     // double Musculature.sprintIndex = sprintIndex;
-    if (action.isSprinting() && currentStamina > 0) {
+    if (action != null && action.isSprinting() && currentStamina > 0) {
       double newStamina =  currentStamina - 2f;
       setStamina(newStamina);
       return newStamina;
@@ -79,7 +84,7 @@ public class StaminaHandler {
   public double JumpingState(double currentStamina) {
     // TODO: Implement jumpIndex
     // double Musculature.jumpIndex = jumpIndex;
-    if (action.isJumping() && currentStamina > 0) {
+    if (action != null && action.isJumping() && currentStamina > 0) {
       double newStamina = currentStamina - 2f;
       setStamina(newStamina);
       return newStamina;
@@ -96,7 +101,7 @@ public class StaminaHandler {
   public double CrouchingState(double currentStamina) {
     // TODO: Implement recoveryIndex
     // double Musculature.recoveryIndex = recoveryIndex;
-    if (action.isCrouching()) {
+    if (action != null && action.isCrouching()) {
       double newStamina = currentStamina + 2f;
       setStamina(newStamina);
       return newStamina;

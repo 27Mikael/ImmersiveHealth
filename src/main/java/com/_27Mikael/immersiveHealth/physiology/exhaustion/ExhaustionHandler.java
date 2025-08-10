@@ -1,13 +1,10 @@
 package com._27Mikael.immersiveHealth.physiology.exhaustion;
 
-import com._27Mikael.immersiveHealth.events.PlayerActionRetriever;
-import com._27Mikael.immersiveHealth.events.PlayerAttributeRetriever;
-
 
 public class ExhaustionHandler {
 
   
-  public Exhaustion(double currentStamina, double endurance) {
+  public void Exhaustion(double currentStamina, double endurance) {
     // limit 
   }
 
@@ -17,22 +14,27 @@ public class ExhaustionHandler {
    * @param currentStamina
    * @return void
    */
-  public boolean isExhausted(double endurance) {
+  public boolean isExhausted(double endurance, boolean isSprinting, boolean isSitting, boolean isCrouching, boolean isJumping) {
     if (endurance == 0 && isSprinting) {
       // endurance regenerates if you sleep
       // initiate regeneration
       // endurance += recoveryIndex;
+      return true;
     } else if (endurance == 0 && isSitting){
       // endurance regenerates if you eat
       // initiate regeneration
       // endurance += recoveryIndex;
+      return true;
     } else if (endurance == 0 && isCrouching){
       // endurance regenerates if you sit
       // initiate regeneration
       // endurance += recoveryIndex;
-    } else  if (endurance == 0 && isJumping) {
+      return true;
+    } else if (endurance == 0 && isJumping) {
       // endurance regenerates if 
+      return true;
     }
+    return false;
   }
 
 

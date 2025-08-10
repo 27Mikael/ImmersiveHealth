@@ -78,13 +78,16 @@ cd ImmersiveHealth
 ./gradlew build
 Then place the generated .jar file into your Minecraft mods folder.
 ```
+
 ## 🔥 Contributors
+
 Thanks to these amazing contributors:
 <a href="https://github.com/27Mikael/ImmersiveHealth/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=27Mikael/ImmersiveHealth" />
 </a>
 
 ## 📜 Changelog
+
 <details> <summary>Click to expand</summary>
 [Unreleased] — First official public release 🚀
 
@@ -93,8 +96,10 @@ Thanks to these amazing contributors:
 </details>
 
 ## 📄 License
+
 This project is licensed under the MIT License – see the LICENSE file for details.
 
 ## ⚡ Stay Connected
+
 📌 Twitter: @YourTwitterHandle
 📌 GitHub: 27Mikael

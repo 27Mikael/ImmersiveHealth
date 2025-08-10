@@ -28,7 +28,13 @@ public class PlayerActionRetriever {
     isCrouching = currentPlayer.isCrouching();
 
     if (currentPlayer.level().isClientSide && currentPlayer.input != null) {
-        isJumping = currentPlayer.input.jumping;
+      // Client-side: Direct input detection
+      isJumping = currentPlayer.input.jumping;
+    } else {
+      // Server-side: Physics based detection  
+      boolean wasOnGround = currentPlayer.onGrodund();
+      boolean isMovingUp = currentPlayer.getDeltaMovement().y > 0.1;
+      isJumping = !wasOnGround && isMovingUp;
     }
 
     // debug output
