@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9020088-b0eb-4e85-b4fc-7375381b1fbf" name="Changes" comment="" />
+    <list default="true" id="f9020088-b0eb-4e85-b4fc-7375381b1fbf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.direnv/bin/nix-direnv-reload" beforeDir="false" afterPath="$PROJECT_DIR$/.direnv/bin/nix-direnv-reload" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/Physiology.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/capabilities/IStamina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/entity/kinesis/Kinesis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/entity/kinesis/endurance/EnduranceHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/entity/kinesis/stamina/StaminaHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/event/PlayerActionRetriever.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/events/PlayerActionRetriever.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/events/PlayerAttributeRetriever.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/_27Mikael/physiology/events/PlayerEventUpdater.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,22 +71,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle./run/media/harbinger/StorageSSD/Physiology [createMcpToSrg].executor": "Run",
-    "Gradle./run/media/harbinger/StorageSSD/realHealth [createMcpToSrg].executor": "Run",
-    "Gradle.Physiology [createMcpToSrg].executor": "Run",
-    "Gradle.realHealth [createMcpToSrg].executor": "Run",
-    "Gradle.realHealth [runClient].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/run/media/harbinger/StorageSSD/Physiology/src/main/java/com/_27Mikael/physiology/events/PlayerEventRetriever.java",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle./run/media/harbinger/StorageSSD/ImmersiveHealth [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle./run/media/harbinger/StorageSSD/Physiology [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle./run/media/harbinger/StorageSSD/realHealth [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Physiology [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.realHealth [createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.realHealth [runClient].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/run/media/harbinger/StorageSSD/Physiology/src/main/java/com/_27Mikael/physiology/events/PlayerEventRetriever.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="realHealth [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>

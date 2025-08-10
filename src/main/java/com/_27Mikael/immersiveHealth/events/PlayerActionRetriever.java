@@ -1,0 +1,61 @@
+package com._27Mikael.immersiveHealth.events;
+
+import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+public class PlayerActionRetriever {
+
+  private boolean isSitting;
+  private boolean isJumping;
+  private boolean isSleeping;
+  private boolean isSprinting;
+  private boolean isCrouching;
+
+  private Player currentPlayer;
+
+  @SubscribeEvent
+  public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+
+    // WARN: consider adding physics based movement detection.
+    // getDeltaMovement().length() > 0.1
+  
+    this.currentPlayer = event.player;
+
+    isSitting = currentPlayer.isPassenger();
+    isSleeping = currentPlayer.isSleeping();
+    isSprinting = currentPlayer.isSprinting();
+    isCrouching = currentPlayer.isCrouching();
+
+    if (currentPlayer.level().isClientSide && currentPlayer.input != null) {
+        isJumping = currentPlayer.input.jumping;
+    }
+
+    // debug output
+    // System.out.println("Jumping: " + isJumping + ", Sprinting: " + isSprinting);
+  }
+
+  public boolean isCrouching() {
+      return isCrouching;
+  }
+
+  public boolean isJumping() {
+      return isJumping;
+  }
+
+  public boolean isSprinting() {
+      return isSprinting;
+  }
+
+  public boolean isSitting() {
+      return isSitting;
+  }
+  
+  public boolean isSleeping() {
+    return isSleeping;
+  }
+
+  public Player getCurrentPlayer() {
+    return currentPlayer;
+  }
+}

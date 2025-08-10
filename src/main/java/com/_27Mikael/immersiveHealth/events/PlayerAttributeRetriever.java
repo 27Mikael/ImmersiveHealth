@@ -1,11 +1,11 @@
-package  com._27Mikael.physiology.events;
+package com._27Mikael.immersiveHealth.events;
 
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-public class PlayerArributeRetriever {
+public class PlayerAttributeRetriever {
 
   double movementSpeed;
   double attackSpeed;
@@ -18,9 +18,9 @@ public class PlayerArributeRetriever {
     Player player = event.getEntity();
     
     // movement related events
-    movementSpeed = player.getAttributes(Attributes.MOVEMENT_SPEED).getValue();
-    attackSpeed = player.getAttributes(Attributes.ATTACK_SPEED).getValue();
-    attackDamage = player.getAttributes(Attributes.ATTACK_DAMAGE).getValue();
+    movementSpeed = player.getAttribute(Attributes.MOVEMENT_SPEED).getValue();
+    attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED).getValue();
+    attackDamage = player.getAttribute(Attributes.ATTACK_DAMAGE).getValue();
 
   }
 
