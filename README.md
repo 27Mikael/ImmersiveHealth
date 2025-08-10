@@ -91,6 +91,7 @@ Thanks to these amazing contributors:
 [Planned] — Thirst system, temperature integration, muscle & metabolism systems ✨
 
 </details>
+
 ## 📄 License
 This project is licensed under the MIT License – see the LICENSE file for details.
 
