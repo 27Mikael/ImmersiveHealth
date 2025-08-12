@@ -4,34 +4,34 @@ package com._27Mikael.immersiveHealth.physiology.exhaustion;
 public class ExhaustionHandler {
 
   
-  public void Exhaustion(double currentStamina, double endurance) {
+  public void Exhaustion(double endurance, double stamina) {
     // limit 
   }
 
   /**
    *
-   * Endurance exhaustion logic
-   * @param currentStamina
+   * Stamina exhaustion logic
+   * @param isSitting
    * @return void
    */
-  public boolean isExhausted(double endurance, boolean isSprinting, boolean isSitting, boolean isCrouching, boolean isJumping) {
-    if (endurance == 0 && isSprinting) {
-      // endurance regenerates if you sleep
+  public boolean isExhausted(double stamina, boolean isSprinting, boolean isSitting, boolean isCrouching, boolean isJumping) {
+    if (stamina == 0 && isSprinting) {
+      // stamina regenerates if you sleep
       // initiate regeneration
-      // endurance += recoveryIndex;
+      // stamina += recoveryIndex;
       return true;
-    } else if (endurance == 0 && isSitting){
-      // endurance regenerates if you eat
+    } else if (stamina == 0 && isSitting){
+      // stamina regenerates if you eat
       // initiate regeneration
-      // endurance += recoveryIndex;
+      // stamina += recoveryIndex;
       return true;
-    } else if (endurance == 0 && isCrouching){
-      // endurance regenerates if you sit
+    } else if (stamina == 0 && isCrouching){
+      // stamina regenerates if you sit
       // initiate regeneration
-      // endurance += recoveryIndex;
+      // stamina += recoveryIndex;
       return true;
-    } else if (endurance == 0 && isJumping) {
-      // endurance regenerates if 
+    } else if (stamina == 0 && isJumping) {
+      // stamina regenerates if 
       return true;
     }
     return false;
@@ -40,13 +40,13 @@ public class ExhaustionHandler {
 
   /**
    * Stamina exhaustion logic
-   * @param currentStamina
+   * @param stamina
    * @return void
    */
-  public void Exhausted(double currentStamina) {
+  public void Exhausted(double stamina) {
     // TODO: Im
-    if (currentStamina == 0) {
-      // initiate the endurance system
+    if (stamina == 0) {
+      // initiate the stamina system
     }
   }
 }

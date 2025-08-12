@@ -1,7 +1,8 @@
 package com._27Mikael.immersiveHealth.events;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.TickEvent;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class PlayerActionRetriever {
@@ -27,12 +28,12 @@ public class PlayerActionRetriever {
     isSprinting = currentPlayer.isSprinting();
     isCrouching = currentPlayer.isCrouching();
 
-    if (currentPlayer.level().isClientSide && currentPlayer.input != null) {
+    if (currentPlayer instanceof LocalPlayer localplayer) {
       // Client-side: Direct input detection
-      isJumping = currentPlayer.input.jumping;
+        isJumping = localplayer.input.jumping;
     } else {
       // Server-side: Physics based detection  
-      boolean wasOnGround = currentPlayer.onGrodund();
+      boolean wasOnGround = currentPlayer.onGround();
       boolean isMovingUp = currentPlayer.getDeltaMovement().y > 0.1;
       isJumping = !wasOnGround && isMovingUp;
     }

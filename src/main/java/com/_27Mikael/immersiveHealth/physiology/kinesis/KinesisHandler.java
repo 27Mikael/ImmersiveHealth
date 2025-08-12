@@ -15,14 +15,14 @@ import com._27Mikael.immersiveHealth.physiology.kinesis.stamina.StaminaHandler;
 
 public class KinesisHandler {
 
-  private StaminaHandler staminaHandler;
-  private EnduranceHandler enduranceHandler;
-  private ExhaustionHandler exhaustionHandler;
+  private final StaminaHandler staminaHandler;
+  private final EnduranceHandler enduranceHandler;
+  private final ExhaustionHandler exhaustionHandler;
 
-  private PlayerActionRetriever actionRetriever;
+  private final PlayerActionRetriever actionRetriever;
 
   public KinesisHandler(Player player, PlayerActionRetriever actionRetriever, PlayerAttributeRetriever attributeRetriever) {
-    // initialize the currentStamina and endurance systems
+    // initialize the stamina and endurance systems
     this.staminaHandler = new StaminaHandler(100.0);
     this.enduranceHandler = new EnduranceHandler(100.0);
     this.exhaustionHandler = new ExhaustionHandler();
@@ -41,29 +41,28 @@ public class KinesisHandler {
   /******************************************************************************************************
    * 
    *                                   Main movement processing logic
-   *                                   @param player The Player to process
    *
    *****************************************************************************************************/
   public void processMovementLogic() {
-    double currentStamina = staminaHandler.getStamina();
-    double currentEndurance = enduranceHandler.getEndurance();
+    double stamina = staminaHandler.getStamina();
+    double endurance = enduranceHandler.getEndurance();
 
-    if (currentStamina > 0) {
+    if (stamina > 0) {
       // initiate the stamina system
-      handleStaminaMovement(currentStamina);
-    } else if (currentEndurance > 0) {
+      handleStaminaMovement(stamina);
+    } else if (endurance > 0) {
       // initiate the endurance system
-      handleEnduranceMovement(currentEndurance);
+      handleEnduranceMovement(endurance);
       // preventStaminaRegen(); // TODO: Implement this method
     } else {
       // TODO: Player exhaustion state
-      handleExhausion();
+      // handleExhausion();
     }
   }
 
   /**
    * Handle movement when running on staminaHandler
-   * @param stamina CurrentStamina value
+   * @param stamina stamina value
    */
   private void handleStaminaMovement(double stamina) {
     boolean isMoving = actionRetriever.isSprinting() || actionRetriever.isJumping();
@@ -127,8 +126,7 @@ public class KinesisHandler {
 
   /**
    * Check if player can perform parkour actions
-   * @param player The Player attempting parkour 
-   * @param parkourCost Base stamina cost 
+   * @param parkourCost Base stamina cost
    * @return true if parkour is allowed
    */
   public boolean canPerformParkour(int parkourCost) {
@@ -147,8 +145,8 @@ public class KinesisHandler {
 
   /**
    * Apply cost when player doest parkour
-   * @param player 
-   * @param baseParkourCost 
+   * @param player current player
+   * @param baseParkourCost cost movement
    */
   @OnlyIn(Dist.CLIENT)
   public void executeParkourMove(Player player, int baseParkourCost) {
@@ -191,8 +189,7 @@ public class KinesisHandler {
     double endurancePercent = enduranceHandler.getEndurancePercentage();
     
     // Factor in current movement state from your retrievers
-    boolean isActivelyMoving = actionRetriever.isSprinting() || 
-                              actionRetriever.isJumping();
+    boolean isActivelyMoving = actionRetriever.isSprinting() || actionRetriever.isJumping();
     
     if (staminaPercent > 0) {
       return staminaPercent; // Full efficiency when stamina available
@@ -210,10 +207,8 @@ public class KinesisHandler {
    */
   public boolean isParkourBlocked() {
     // Block parkour if exhausted and actively moving
-    boolean isExhausted = staminaHandler.getStamina() <= 0 && 
-                         enduranceHandler.getEndurance() <= 0;
-    boolean isActivelyMoving = actionRetriever.isSprinting() || 
-                              actionRetriever.isJumping();
+    boolean isExhausted = staminaHandler.getStamina() <= 0 && enduranceHandler.getEndurance() <= 0;
+    boolean isActivelyMoving = actionRetriever.isSprinting() || actionRetriever.isJumping();
     
     return isExhausted && isActivelyMoving;
   }

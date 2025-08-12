@@ -26,7 +26,7 @@ public class EnduranceHandler {
     this.attributes = attributeRetriever;
   }
 
-  // Getters and setters
+  // Getters and setters 
   public double getEndurance() {
     return endurance;
   }
@@ -37,6 +37,11 @@ public class EnduranceHandler {
 
   public double getMaxEndurance() {
     return maxEndurance;
+  }
+
+  public double setMaxEndurance(double maxEndurance) {
+    this.maxEndurance = maxEndurance;
+      return maxEndurance;
   }
 
   public double getEndurancePercentage() {

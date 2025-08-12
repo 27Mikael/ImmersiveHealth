@@ -1,12 +1,6 @@
 package com._27Mikael.immersiveHealth.physiology.kinesis.stamina;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import net.minecraft.world.entity.player.Player;
-
 import com._27Mikael.immersiveHealth.events.PlayerActionRetriever;
-import com._27Mikael.immersiveHealth.events.PlayerAttributeRetriever;
 
 
 public class StaminaHandler {
@@ -38,9 +32,14 @@ public class StaminaHandler {
     return maxStamina;
   }
 
+  public double setMaxStamina(double maxStamina) {
+    this.maxStamina = maxStamina;
+      return maxStamina;
+  }
+
   /**
    *  Check if player can perform regular movement actions
-   *  @return true if currentStamina > 0
+   *  @return true if stamina > 0
    */
   public boolean canPerformMovement() {
     return stamina > 0;
@@ -48,65 +47,64 @@ public class StaminaHandler {
 
   /**
    * Stamina regeneration logic
-   * @param currentStamina current currentStamina value
-   * @return void
+   * @param stamina current stamina value
    */
-  public void isRegenerating(double currentStamina) {
+  public void isRegenerating(double stamina) {
     // TODO: Implement Musculature.recoveryIndex
     // double Musculature.recoveryIndex = recoveryIndex;
-    if (currentStamina <= 0) {
-      // currentStamina += recoveryIndex;
-      setStamina(currentStamina + 1.0f);
+    if (stamina <= 0) {
+      // stamina += recoveryIndex;
+      setStamina(stamina + 1.0f);
     }
   }
 
   /**
    * Stamina drain logic for running
-   * @param currentStamina
+   * @param stamina Retrieves stamina
    * @return newStamina
    */
-  public double SprintState(double currentStamina) {
+  public double SprintState(double stamina) {
     // TODO: Implement sprintIndex
     // double Musculature.sprintIndex = sprintIndex;
-    if (action != null && action.isSprinting() && currentStamina > 0) {
-      double newStamina =  currentStamina - 2f;
+    if (action != null && action.isSprinting() && stamina > 0) {
+      double newStamina =  stamina - 2f;
       setStamina(newStamina);
       return newStamina;
     }
-    return currentStamina;
+    return stamina;
   }
 
   /**
    * Stamina drain logic for jumping
-   * @param currentStamina
+   * @param stamina Retrieves stamina
    * @return newStamina
    */
-  public double JumpingState(double currentStamina) {
+  public double JumpingState(double stamina) {
     // TODO: Implement jumpIndex
     // double Musculature.jumpIndex = jumpIndex;
-    if (action != null && action.isJumping() && currentStamina > 0) {
-      double newStamina = currentStamina - 2f;
+    if (action != null && action.isJumping() && stamina > 0) {
+      double newStamina = stamina - 2f;
       setStamina(newStamina);
       return newStamina;
     }
-    return currentStamina;
+    return stamina;
   }
  
 
   /**
    * Stamina drain logic for crouching
-   * @param currentStamina
+   * @param stamina Retrieves current stamina
    * @return newStamina
    */
-  public double CrouchingState(double currentStamina) {
+  public double CrouchingState(double stamina) {
     // TODO: Implement recoveryIndex
     // double Musculature.recoveryIndex = recoveryIndex;
     if (action != null && action.isCrouching()) {
-      double newStamina = currentStamina + 2f;
+      double newStamina = stamina + 2f;
       setStamina(newStamina);
       return newStamina;
     }
-    return currentStamina;
+    return stamina;
   }
 
   /**

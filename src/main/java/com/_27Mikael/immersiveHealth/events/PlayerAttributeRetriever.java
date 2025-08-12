@@ -5,6 +5,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
+import java.util.Objects;
+
 public class PlayerAttributeRetriever {
 
   double movementSpeed;
@@ -18,9 +20,9 @@ public class PlayerAttributeRetriever {
     Player player = event.getEntity();
     
     // movement related events
-    movementSpeed = player.getAttribute(Attributes.MOVEMENT_SPEED).getValue();
-    attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED).getValue();
-    attackDamage = player.getAttribute(Attributes.ATTACK_DAMAGE).getValue();
+    movementSpeed = Objects.requireNonNull(player.getAttribute(Attributes.MOVEMENT_SPEED)).getValue();
+    attackSpeed = Objects.requireNonNull(player.getAttribute(Attributes.ATTACK_SPEED)).getValue();
+    attackDamage = Objects.requireNonNull(player.getAttribute(Attributes.ATTACK_DAMAGE)).getValue();
 
   }
 

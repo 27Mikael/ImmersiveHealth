@@ -1,66 +1,61 @@
-[01Aug2025 20:01:45.107] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, /home/harbinger/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.0.19, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
-[01Aug2025 20:01:45.110] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.14 by N/A; OS Linux arch amd64 version 6.12.40
-[01Aug2025 20:01:45.198] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[01Aug2025 20:01:45.309] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[01Aug2025 20:01:45.384] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[01Aug2025 20:01:45.564] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Mesa Intel(R) UHD Graphics 630 (CFL GT2) GL version 4.6 (Core Profile) Mesa 25.1.7, Intel
-[01Aug2025 20:01:45.587] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/harbinger/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
-[01Aug2025 20:01:46.064] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/harbinger/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.0.19/11325ab7cc62ad123c202b63216724c0a9af1a21/javafmllanguage-1.20.1-47.0.19.jar is missing mods.toml file
-[01Aug2025 20:01:46.066] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/harbinger/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.0.19/43bcf9e8002338c09b0f793771f6471e5fb74dd7/lowcodelanguage-1.20.1-47.0.19.jar is missing mods.toml file
-[01Aug2025 20:01:46.068] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/harbinger/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.0.19/9ad401a1888591fa336b5685d1572aa4387cf31d/mclanguage-1.20.1-47.0.19.jar is missing mods.toml file
-[01Aug2025 20:01:46.071] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/harbinger/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.0.19/fb98a8fe718272b2822fb1798215d25e97ce84e6/fmlcore-1.20.1-47.0.19.jar is missing mods.toml file
-[01Aug2025 20:01:46.079] [main/ERROR] [net.minecraftforge.fml.loading.moddiscovery.ModInfo/FATAL]: Invalid modId found in file /run/media/harbinger/StorageSSD/realHealth/build/resources/main - realHealth does not match the standard: ^[a-z][a-z0-9_]{1,63}$
-[01Aug2025 20:01:46.080] [main/ERROR] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@595f4da5 found an invalid mod file net.minecraftforge.fml.loading.moddiscovery.ModFileInfo@46b695ec
-net.minecraftforge.fml.loading.moddiscovery.InvalidModFileException: Invalid modId found : realHealth (main)
-	at net.minecraftforge.fml.loading.moddiscovery.ModInfo.<init>(ModInfo.java:61) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.moddiscovery.ModFileInfo.lambda$new$2(ModFileInfo.java:69) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[?:?]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[?:?]
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[?:?]
-	at net.minecraftforge.fml.loading.moddiscovery.ModFileInfo.<init>(ModFileInfo.java:70) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.moddiscovery.ModFileParser.modsTomlParser(ModFileParser.java:47) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.moddiscovery.ModFileParser.readModList(ModFileParser.java:31) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.moddiscovery.ModFile.<init>(ModFile.java:79) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.moddiscovery.ModFile.<init>(ModFile.java:68) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider.createMod(AbstractModProvider.java:52) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator.lambda$scanMods$6(MinecraftLocator.java:43) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
-	at java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:720) ~[?:?]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
-	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[?:?]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[?:?]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575) ~[?:?]
-	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260) ~[?:?]
-	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616) ~[?:?]
-	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622) ~[?:?]
-	at java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627) ~[?:?]
-	at net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator.scanMods(MinecraftLocator.java:47) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer.discoverMods(ModDiscoverer.java:75) ~[fmlloader-1.20.1-47.0.19.jar:?]
-	at net.minecraftforge.fml.loading.FMLLoader.beginModScan(FMLLoader.java:164) ~[fmlloader-1.20.1-47.0.19.jar:1.0]
-	at net.minecraftforge.fml.loading.FMLServiceProvider.beginScanning(FMLServiceProvider.java:86) ~[fmlloader-1.20.1-47.0.19.jar:1.0]
-	at cpw.mods.modlauncher.TransformationServiceDecorator.runScan(TransformationServiceDecorator.java:112) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.TransformationServicesHandler.lambda$runScanningTransformationServices$8(TransformationServicesHandler.java:100) ~[modlauncher-10.0.9.jar:?]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
-	at java.util.HashMap$ValueSpliterator.forEachRemaining(HashMap.java:1779) ~[?:?]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575) ~[?:?]
-	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260) ~[?:?]
-	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616) ~[?:?]
-	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622) ~[?:?]
-	at java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627) ~[?:?]
-	at cpw.mods.modlauncher.TransformationServicesHandler.runScanningTransformationServices(TransformationServicesHandler.java:102) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.TransformationServicesHandler.initializeTransformationServices(TransformationServicesHandler.java:55) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:88) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[01Aug2025 20:01:46.185] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[12Aug2025 11:47:51.228] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, /home/harbinger/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.0.19, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[12Aug2025 11:47:51.232] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.14 by N/A; OS Linux arch amd64 version 6.12.40
+[12Aug2025 11:47:51.335] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[12Aug2025 11:47:51.414] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[12Aug2025 11:47:51.495] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[12Aug2025 11:47:51.610] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Mesa Intel(R) UHD Graphics 630 (CFL GT2) GL version 4.6 (Core Profile) Mesa 25.1.7, Intel
+[12Aug2025 11:47:51.616] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/harbinger/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
+[12Aug2025 11:47:51.996] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/harbinger/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.0.19/11325ab7cc62ad123c202b63216724c0a9af1a21/javafmllanguage-1.20.1-47.0.19.jar is missing mods.toml file
+[12Aug2025 11:47:51.997] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/harbinger/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.0.19/43bcf9e8002338c09b0f793771f6471e5fb74dd7/lowcodelanguage-1.20.1-47.0.19.jar is missing mods.toml file
+[12Aug2025 11:47:51.998] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/harbinger/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.0.19/9ad401a1888591fa336b5685d1572aa4387cf31d/mclanguage-1.20.1-47.0.19.jar is missing mods.toml file
+[12Aug2025 11:47:52.000] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/harbinger/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.0.19/fb98a8fe718272b2822fb1798215d25e97ce84e6/fmlcore-1.20.1-47.0.19.jar is missing mods.toml file
+[12Aug2025 11:47:52.077] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[12Aug2025 11:47:53.491] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[12Aug2025 11:47:53.493] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/harbinger/.gradle/caches/forge_gradle/assets, --assetIndex, 5]
+[12Aug2025 11:47:54.623] [pool-4-thread-1/FATAL] [mixin/]: Mixin apply failed parcool.mixins.json:common.EntityMixin -> net.minecraft.world.entity.Entity: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on onGetEyeHeight could not find any targets matching 'Lnet/minecraft/world/entity/Entity;m_20192_()F' in net.minecraft.world.entity.Entity. Using refmap parcool.refmap.json [PREINJECT Applicator Phase -> parcool.mixins.json:common.EntityMixin -> Prepare Injections ->  -> handler$zza000$onGetEyeHeight(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onGetEyeHeight could not find any targets matching 'Lnet/minecraft/world/entity/Entity;m_20192_()F' in net.minecraft.world.entity.Entity. Using refmap parcool.refmap.json [PREINJECT Applicator Phase -> parcool.mixins.json:common.EntityMixin -> Prepare Injections ->  -> handler$zza000$onGetEyeHeight(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.validateTargets(InjectionInfo.java:656) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findTargets(InjectionInfo.java:587) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:330) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:316) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:308) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:149) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:708) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1311) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1042) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:393) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:325) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:383) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:365) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30]
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?]
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?]
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?]
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?]
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:135) ~[securejarhandler-2.1.10.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?]
+	at net.minecraftforge.registries.GameData.init(GameData.java:137) ~[forge-1.20.1-47.0.19_mapped_parchment_2023.06.26-1.20.1.jar%23182%23189!/:?]
+	at net.minecraftforge.registries.GameData.<clinit>(GameData.java:122) ~[forge-1.20.1-47.0.19_mapped_parchment_2023.06.26-1.20.1.jar%23182%23189!/:?]
+	at net.minecraft.core.registries.BuiltInRegistries.forge(BuiltInRegistries.java:429) ~[forge-1.20.1-47.0.19_mapped_parchment_2023.06.26-1.20.1.jar%23183!/:?]
+	at net.minecraft.core.registries.BuiltInRegistries.forge(BuiltInRegistries.java:409) ~[forge-1.20.1-47.0.19_mapped_parchment_2023.06.26-1.20.1.jar%23183!/:?]
+	at net.minecraft.core.registries.BuiltInRegistries.<clinit>(BuiltInRegistries.java:121) ~[forge-1.20.1-47.0.19_mapped_parchment_2023.06.26-1.20.1.jar%23183!/:?]
+	at net.minecraft.server.Bootstrap.bootStrap(Bootstrap.java:43) ~[forge-1.20.1-47.0.19_mapped_parchment_2023.06.26-1.20.1.jar%23183!/:?]
+	at net.minecraft.client.main.Main.lambda$main$0(Main.java:151) ~[forge-1.20.1-47.0.19_mapped_parchment_2023.06.26-1.20.1.jar%23183!/:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:840) ~[?:?]
